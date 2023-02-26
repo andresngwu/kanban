@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/kanban/static/css/main.45389113.css",
+    "main.js": "/kanban/static/js/main.e7a74f3a.js",
+    "index.html": "/kanban/index.html",
+    "main.45389113.css.map": "/kanban/static/css/main.45389113.css.map",
+    "main.e7a74f3a.js.map": "/kanban/static/js/main.e7a74f3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45389113.css",
+    "static/js/main.e7a74f3a.js"
+  ]
+}
