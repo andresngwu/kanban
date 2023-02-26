@@ -12,12 +12,13 @@ const InputField: React.FC<Props> = ({task, setTask, handleAdd}: Props) => {
         <form 
             className="input" 
             onSubmit={(e) => {
-                handleAdd(e)
+                handleAdd(e);
                 inputRef.current?.blur();
                 }}>
             <input 
                 ref={inputRef}
                 type="input"
+                value={task}
                 onChange={(e) => setTask(e.target.value)}
                 placeholder="Enter a task" 
                 className='input__box' 
