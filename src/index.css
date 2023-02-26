@@ -1,13 +1,186 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+     margin: 0;
+     font-family: 'Roboto', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5EAEA;
+    font-family: 'Roboto', sans-serif;
 }
+
+
+.heading{
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 30px 0;
+    color: #0c0b0b;
+    z-index: 1;
+    text-align: center;
+}
+  
+@media (max-width: 800px) {
+    .heading {
+      margin: 15px 0;
+      font-size: 35px;
+    }
+  }
+
+/* Input Field */
+.input {
+  display: flex;
+  width: 40%;
+  position: relative;
+  align-items: center;
+  margin-bottom: 26px;
+  margin-top: 10px;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px 30px;
+  font-size: 20px;
+  border: none;
+  transition: 0.2s;
+}
+
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input_submit {
+    position: absolute;
+    height: 40px;
+    margin: 12px;
+    padding: 0 20px;
+    border-radius: 10px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    background-color: #A459D1;
+    color: white;
+    transition: 0.2s all;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  
+  .input_submit:hover {
+    background-color: #9534ce;
+  }
+  
+  .input_submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
+
+  .input_icon{
+    font-size: 20px;
+    color: #FCFFE7;
+  }
+
+  /* Task List */
+
+  .container{
+    display: flex;
+    width: 95%;
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .taskList {
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #A459D1;
+    
+  }
+
+  .column__heading{
+    text-align: center;
+    text-transform: uppercase;
+    color: #2d3034;
+    font-size: 25px;
+  }
+
+  .inprogress{
+    background-color: #FFB84C;
+  }
+  .completed{
+    background-color: #F16767;
+  }
+
+  .dragTodo{
+    background-color: #a740e3;
+  }
+  .dragInProgress{
+    background-color: #f99d15;
+  }
+
+  .dragComplete{
+    background-color: #e03535;
+  }
+  
+  /* Task Card */
+
+  .taskCard {
+    display: flex;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    transition: 0.2s;
+    background-color: #FCFFE7;
+  }
+  .taskCard:hover{
+    box-shadow: 0 0 5px black;
+    transform: scale(1.03);
+  }
+
+  .taskCard--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #313638;
+  }
+  
+  .taskCard--text:focus {
+    outline: none;
+  }
+  
+  .icon {
+    margin-left: 10px;
+    font-size: 22px;
+    cursor: pointer;
+    color: rgb(92, 89, 89);
+  }
+
+  .icon:hover{
+    color: rgb(35, 34, 34);
+  }
+
+  .dragging{
+    box-shadow: 0 0 20px black;
+  }
+    
+  @media (max-width: 1000px) {
+    .input {
+      width: 50%;
+    }
+    .taskList {
+      width: 95%;
+      margin-bottom: 15px;
+    }
+    .container{
+        width: 80%;
+        flex-direction: column;
+    }
+  }
